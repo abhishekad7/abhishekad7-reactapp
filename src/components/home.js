@@ -26,13 +26,13 @@ class Home extends Component {
                     <button id="explore-btn" className="btn p-3 px-5" onClick={this.props.main}>Explore about me</button>
                 </div>
 
-                <div style={{position: "absolute", width: "100%", bottom: "60px"}}>
-                    <p style={{fontSize: 31, letterSpacing: 6}} className="mt4">
-                        <a href="https://github.com/abhishekad7/" className="text-light"><FontAwesomeIcon icon={faGithub}/></a> 
-                        <a href="https://www.facebook.com/gallic.ricardo/" className="text-light"> <FontAwesomeIcon icon={faFacebookF}/></a> 
-                        <a href="https://www.linkedin.com/in/abhishekad7/" className="text-light"> <FontAwesomeIcon icon={faLinkedin}/></a> 
-                        <a href="https://www.twitter.com/imabhishekad7/" className="text-light"> <FontAwesomeIcon icon={faTwitter}/></a> 
-                        <a href="https://medium.com/abhishekad7/" className="text-light"> <FontAwesomeIcon icon={faMedium}/></a>
+                <div style={{position: "absolute", width: "100%", bottom: "40px"}}>
+                    <p style={{fontSize: 41, letterSpacing: 6}}>
+                        <span style={{display: "inline-block", position: "relative", padding: "2px 20px 2px 20px"}}><a href="https://github.com/abhishekad7/" className="text-light" ><FontAwesomeIcon icon={faGithub}/></a></span> 
+                        <span style={{display: "inline-block", position: "relative", padding: "2px 20px 2px 20px"}}><a href="https://www.facebook.com/gallic.ricardo/" className="text-light" > <FontAwesomeIcon icon={faFacebookF}/></a></span> 
+                        <span style={{display: "inline-block", position: "relative", padding: "2px 20px 2px 20px"}}><a href="https://www.linkedin.com/in/abhishekad7/" className="text-light" > <FontAwesomeIcon icon={faLinkedin}/></a></span> 
+                        <span style={{display: "inline-block", position: "relative", padding: "2px 20px 2px 20px"}}><a href="https://www.twitter.com/imabhishekad7/" className="text-light" > <FontAwesomeIcon icon={faTwitter}/></a></span> 
+                        <span style={{display: "inline-block", position: "relative", padding: "2px 20px 2px 20px"}}><a href="https://medium.com/abhishekad7/" className="text-light" > <FontAwesomeIcon icon={faMedium}/></a></span>
                     </p>
                 </div>
 
