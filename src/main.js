@@ -4,8 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import About from './components/about';
 import Projects from './components/projects';
 import Contact from './components/contact';
+import { restElement } from '@babel/types';
 
 class Main extends Component {
+
+    activeColor = "#ff0077";
+    inactiveColor = "#fff";
 
     constructor(props){
         super(props);
@@ -14,19 +18,37 @@ class Main extends Component {
         this.openContact = this.openContact.bind(this);
         this.state = {
             nextSection: <About />,
+            aboutColor: this.activeColor,
+            projectColor: this.inactiveColor,
+            contactColor: this.inactiveColor,
         }
     }
 
     openAbout(){
-        this.setState({nextSection: <About/>});
+        this.setState({
+            nextSection: <About />,
+            aboutColor: this.activeColor,
+            projectColor: this.inactiveColor,
+            contactColor: this.inactiveColor,
+        });
     }
 
     openProjects(){
-        this.setState({nextSection: <Projects />})
+        this.setState({
+            nextSection: <Projects />,
+            aboutColor: this.inactiveColor,
+            projectColor: this.activeColor,
+            contactColor: this.inactiveColor,
+        })
     }
 
     openContact(){
-        this.setState({nextSection: <Contact />})
+        this.setState({
+            nextSection: <Contact />,
+            aboutColor: this.inactiveColor,
+            projectColor: this.inactiveColor,
+            contactColor: this.activeColor,
+        })
     }
 
     render() { 
@@ -37,21 +59,21 @@ class Main extends Component {
                         <li onClick={this.props.home}>
                            Home
                         </li>
-                        <li onClick={this.openAbout}>
+                        <li onClick={this.openAbout} style={{color: this.state.aboutColor}}>
                             About
                         </li>
 
-                        <li onClick={this.openProjects}>
+                        <li onClick={this.openProjects} style={{color: this.state.projectColor}}>
                            Projects
                         </li>
 
-                        <li onClick={this.openContact}>
+                        <li onClick={this.openContact} style={{color: this.state.contactColor}}>
                             Contact
                         </li>
                     </div>
                 </div>
 
-                <div id="content" className="">
+                <div id="content">
                     {this.state.nextSection}
                 </div>
             </div>
