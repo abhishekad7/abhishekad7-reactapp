@@ -16,23 +16,25 @@ class Home extends Component {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "100% 100%",
                 paddingTop: "40px",
-            }} className="text-light text-center">
-                <div className="mt-5">
+                textAlign: "center",
+                color: "rgba(220, 220, 220, 1)",
+            }}>
+                <div style={{marginTop: "40px"}}>
                     <p style={{fontSize: "40px"}}>𝕀'𝕞 <span style={{color: "#FF0077"}}>𝔸𝕓𝕙𝕚𝕤𝕙𝕖𝕜 𝕂𝕦𝕞𝕒𝕣</span></p>
                     <p style={{fontSize: 18, fontVariant: "small-caps", letterSpacing: 3}}>| Programmer | Algorithmist | Web-Developer |</p>
                 </div>
 
-                <div style={{width: "100%", padding: "70px 0px 70px 0px"}} className="mt-3">
-                    <button id="explore-btn" className="btn p-3 px-5" onClick={this.props.main}>Explore about me</button>
+                <div style={{width: "100%", padding: "70px 0px 70px 0px", marginTop: "20px"}}>
+                    <button id="explore-btn" onClick={this.props.main}>Explore about me</button>
                 </div>
 
                 <div style={{position: "absolute", width: "100%", bottom: "40px"}}>
                     <p style={{fontSize: 41, letterSpacing: 6}}>
-                        <span style={{display: "inline-block", position: "relative", padding: "2px 20px 2px 20px"}}><a href="https://github.com/abhishekad7/" className="text-light" ><FontAwesomeIcon icon={faGithub}/></a></span> 
-                        <span style={{display: "inline-block", position: "relative", padding: "2px 20px 2px 20px"}}><a href="https://www.facebook.com/gallic.ricardo/" className="text-light" > <FontAwesomeIcon icon={faFacebookF}/></a></span> 
-                        <span style={{display: "inline-block", position: "relative", padding: "2px 20px 2px 20px"}}><a href="https://www.linkedin.com/in/abhishekad7/" className="text-light" > <FontAwesomeIcon icon={faLinkedin}/></a></span> 
-                        <span style={{display: "inline-block", position: "relative", padding: "2px 20px 2px 20px"}}><a href="https://www.twitter.com/imabhishekad7/" className="text-light" > <FontAwesomeIcon icon={faTwitter}/></a></span> 
-                        <span style={{display: "inline-block", position: "relative", padding: "2px 20px 2px 20px"}}><a href="https://medium.com/abhishekad7/" className="text-light" > <FontAwesomeIcon icon={faMedium}/></a></span>
+                        <span className="social-icon"><a href="https://github.com/abhishekad7/" className="text-light" ><FontAwesomeIcon icon={faGithub}/></a></span> 
+                        <span className="social-icon"><a href="https://www.facebook.com/gallic.ricardo/" className="text-light" > <FontAwesomeIcon icon={faFacebookF}/></a></span> 
+                        <span className="social-icon"><a href="https://www.linkedin.com/in/abhishekad7/" className="text-light" > <FontAwesomeIcon icon={faLinkedin}/></a></span> 
+                        <span className="social-icon"><a href="https://www.twitter.com/imabhishekad7/" className="text-light" > <FontAwesomeIcon icon={faTwitter}/></a></span> 
+                        <span className="social-icon"><a href="https://medium.com/abhishekad7/" className="text-light" > <FontAwesomeIcon icon={faMedium}/></a></span>
                     </p>
                 </div>
 

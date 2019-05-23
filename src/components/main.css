@@ -1,7 +1,7 @@
 #nav-menu{
     position: fixed;
-    margin: 0 0 0 0;
-    padding: 20 10 20 10;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     left: 0;
     width: 10%;
     height: 99.7vh;
@@ -34,7 +34,7 @@
 #content{
     position: absolute;
     text-align: center;
-    padding: 70px 5px 50px 5px;
+    padding: 70px 0px 5px 0px;
     right: 0;
     width: 90%;
     border: solid 0px red;
@@ -119,6 +119,81 @@
     padding: 10px 7px 10px 7px;
 }
 
+.heading{
+    display: block;
+    text-align: left;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.heading > span{
+    display: inline-block;
+    border-bottom: solid 1px #ff0077;
+    padding: 2px 7px 4px 7px;
+}
+
+
+.form-element{
+    display: block;
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    border: solid 0px red;
+}
+
+.form-element > input{
+    width: 100%;
+    outline: none;
+    padding: 6px 8px 6px 8px;
+    color: #bbb;
+    background-color: rgba(20, 20, 20, 0);
+    border: 0px;
+    border-bottom: solid 3px rgba(60, 60, 60, 1);
+    border-radius: 3px;
+    transition: border 0.5s;
+}
+
+.form-element > textarea{
+    width: 100%;
+    height: 120px;
+    outline: none;
+    padding: 6px 8px 6px 8px;
+    color: #bbb;
+    background-color: rgba(20, 20, 20, 0);
+    border: solid 3px rgba(60, 60, 60, 1);
+    border-radius: 3px;
+    transition: border 0.5s;
+}
+
+.form-element > button{
+    width: 100%;
+    outline: none;
+    padding: 15px 8px 15px 8px;
+    color: #eee;
+    background-color: #ff0077;
+    border: solid 1px #ff0077;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: border 0.5s;
+    cursor: pointer;
+}
+
+.social-icon{
+    display: inline-block;
+    position: relative;
+    padding: 2px 20px 2px 20px;
+}
+
+.social-icon>a{
+    color:#ccc;
+}
+
+.social-icon>a:hover{
+    color: #ff0077;
+}
+
 @media screen and (max-width: 800px){
     #nav-menu{
         position: fixed;
@@ -140,10 +215,10 @@
     }
     
     #content{
+        box-sizing: border-box;
         position: absolute;
-        margin: 0 0 0 0;
-        right: 0;
-        width: 100%;
+        margin: 0px 0px 0px 0px;
+        width: 100vw;
         height: 100vh;
     }
 
@@ -163,4 +238,21 @@
     .skills{
         width: 100%;
     }
+
+    .form-element > input:focus{
+        border-bottom: solid 3px #ff0077;
+    }
+
+    .form-element > input:focus::placeholder{
+        color: #ff0077;
+    }
+
+    .form-element > textarea:focus{
+        border: solid 3px #ff0077;
+    }
+
+    .form-element > textarea:focus::placeholder{
+        color: #ff0077;
+    }
+
 }

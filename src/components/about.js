@@ -17,8 +17,8 @@ class About extends Component {
         return (
             <center>
             <div className="content-holder">
-                <div style={{textAlign: "left", letterSpacing: "4px", fontVariant: "small-caps", fontSize: 30, fontWeight: "normal"}}>
-                    <span style={{display: "inline-block", borderBottom: "solid 1px #ff0077", padding: "2px 7px 12px 7px"}}>Abhishek Kumar</span>
+                <div style={{letterSpacing: "4px", fontSize: 30}} className="heading">
+                    <span>Abhishek Kumar</span>
                 </div>
 
                 <p style={{textAlign: "left", margin: "10px 0px 10px 0px", padding: "5px 12px 5px 12px", color: "rgba(210, 210, 210, 1)", letterSpacing: "1.7px"}}>
@@ -29,22 +29,32 @@ class About extends Component {
             <div className="content-holder flex-container">
                 <div className="profile">
 
-                    <div style={{textAlign: "left", letterSpacing: "2px", fontVariant: "small-caps", fontSize: 20, paddingBottom: "7px"}}>
-                        <span style={{display: "inline-block", borderBottom: "solid 1px #ff0077", padding: "2px 7px 4px 7px"}}>Profile</span>
+                    <div className="heading">
+                        <span>Profile</span>
                     </div>
 
                     <div className="detail-box">
-                        <label className=""><span>Date of Birth :</span></label>
+                        <label className=""><span>Date of Birth</span></label>
                         <span className="detail">28 March 1998</span>
                     </div>
 
                     <div className="detail-box">
-                        <label className=""><span>Profession :</span></label>
+                        <label className=""><span>Profession</span></label>
                         <span className="detail">Student (B.Tech)</span>
                     </div>
 
                     <div className="detail-box">
-                        <label className=""><span>Handle: </span></label>
+                        <label className=""><span>Email</span></label>
+                        <span className="detail">abhishekad7@gmail.com</span>
+                    </div>
+
+                    <div className="detail-box">
+                        <label className=""><span>My Website</span></label>
+                        <span className="detail">abhishekad7.github.io</span>
+                    </div>
+
+                    <div className="detail-box">
+                        <label className=""><span>Handle</span></label>
                         <span className="detail">abhishekad7</span>
                     </div>
 
@@ -54,8 +64,8 @@ class About extends Component {
                 </div>
 
                 <div className="skills">
-                    <div style={{textAlign: "left", letterSpacing: "2px", fontVariant: "small-caps", fontSize: 20, paddingBottom: "7px"}}>
-                        <span style={{display: "inline-block", borderBottom: "solid 1px #ff0077", padding: "2px 7px 4px 7px"}}>Skills</span>
+                    <div className="heading">
+                        <span>Skills</span>
                     </div>
 
                     <div className="detail-box">

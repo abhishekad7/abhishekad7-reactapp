@@ -4,6 +4,7 @@ import './main.css';
 import About from './about';
 import Projects from './projects';
 import Contact from './contact';
+import Footer from './footer';
 
 
 class Main extends Component {
@@ -22,6 +23,11 @@ class Main extends Component {
             projectColor: this.inactiveColor,
             contactColor: this.inactiveColor,
         }
+    }
+
+    componentDidMount(){
+        //console.log("huha");
+        //this.openContact();
     }
 
     openAbout(){
@@ -75,6 +81,7 @@ class Main extends Component {
 
                 <div id="content">
                     {this.state.nextSection}
+                    <Footer />
                 </div>
             </div>
         );
