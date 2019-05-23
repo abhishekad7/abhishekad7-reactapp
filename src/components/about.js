@@ -9,7 +9,9 @@ class About extends Component {
         cli: 60,
         android: 50,
         desktop: 30,
-    }
+    };
+
+    cvlink = "";
 
     render() { 
         return (
@@ -46,11 +48,8 @@ class About extends Component {
                         <span className="detail">abhishekad7</span>
                     </div>
 
-                    <div className="detail-box">
-                        <label className=""><span>Resume: </span></label>
-                        <span className="detail">
-                            <a href="" style={{color: "#aaa", textDecoration: "none"}}>Click to Download</a>
-                        </span>
+                    <div className="detail-box" style={{marginTop: "30px", fontWeight: "bold"}}>
+                        <a href={this.cvlink} style={{display: "", color: "#aaa", textDecoration: "none", border: "solid 2px #ccc", padding: "10px 40px 10px 40px", color: "#fff"}}>Resume</a>
                     </div>
                 </div>
 
