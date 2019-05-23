@@ -180,6 +180,22 @@
     cursor: pointer;
 }
 
+.form-element > input:focus{
+    border-bottom: solid 3px #ff0077;
+}
+
+.form-element > input:focus::placeholder{
+    color: #ff0077;
+}
+
+.form-element > textarea:focus{
+    border: solid 3px #ff0077;
+}
+
+.form-element > textarea:focus::placeholder{
+    color: #ff0077;
+}
+
 .social-icon{
     display: inline-block;
     position: relative;
@@ -239,20 +255,6 @@
         width: 100%;
     }
 
-    .form-element > input:focus{
-        border-bottom: solid 3px #ff0077;
-    }
-
-    .form-element > input:focus::placeholder{
-        color: #ff0077;
-    }
-
-    .form-element > textarea:focus{
-        border: solid 3px #ff0077;
-    }
-
-    .form-element > textarea:focus::placeholder{
-        color: #ff0077;
-    }
+    
 
 }
