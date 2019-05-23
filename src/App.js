@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from "./components/home";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import About from './components/about';
-import Main from './main';
+//import { library } from '@fortawesome/fontawesome-svg-core'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Main from './components/main';
 
 
 class App extends Component {
@@ -15,9 +14,12 @@ class App extends Component {
     this.state = {
       nextpage: <Home main={this.openMain} />,
     };
-    //this.openHome();
   }
   
+  componentDidMount(){
+    this.openMain();
+  }
+
   openHome(){
     this.setState({nextpage: <Home main={this.openMain} />});
   }
@@ -27,8 +29,7 @@ class App extends Component {
   }
 
   render() { 
-    //console.log("render");
-    //console.log(this.state);
+    
     return (
       this.state.nextpage
     );

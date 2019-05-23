@@ -46,10 +46,78 @@
     position: relative;
     width: 75%;
     height: auto;
+    margin-bottom: 10px;
     padding: 5px 20px 5px 20px;
     border: solid 0px blue;
 }
 
+.profile{
+    width: 50%;
+    left: 0px;
+    border: solid 0px red;
+}
+
+.detail-box{
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.detail-box > label{
+    display: block;
+    color: rgb(200, 200, 200);
+    font-weight: bold;
+    font-size: 16px;
+    font-variant: small-caps;
+    border: solid 0px red;
+    margin: 0px;
+}
+
+.detail-box > label > span{
+    border: solid 0px rgba(180, 180, 180, 1);
+}
+
+.skill-box{
+    width: 100%;
+    background-color: #AAA;
+    height: 24px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.skill-level{
+    background-color: #0a74cc;
+    height: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+.detail-box > .detail{
+    display: inline-block;
+    width: 100%;
+    border: solid 0px #ff0077;
+    padding: 0px 3px 3px 20px;
+    color: rgba(200, 200, 200, 1);
+}
+
+.skills{
+    width: 50%;
+    right: 0px;
+    border: solid 0px green;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.flex-container > div{
+    margin: 5px 5px 5px 5px;
+    padding: 10px 7px 10px 7px;
+}
 
 @media screen and (max-width: 800px){
     #nav-menu{
@@ -82,5 +150,17 @@
     .content-holder{
         width: 100%;
         padding: 5px 10px 5px 10px;
+    }
+
+    .flex-container{
+        display: block;
+    }
+
+    .profile{
+        width: 100%;
+    }
+
+    .skills{
+        width: 100%;
     }
 }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './main.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import About from './components/about';
-import Projects from './components/projects';
-import Contact from './components/contact';
-import { restElement } from '@babel/types';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import About from './about';
+import Projects from './projects';
+import Contact from './contact';
+
 
 class Main extends Component {
 
