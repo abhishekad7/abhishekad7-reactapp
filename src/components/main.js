@@ -61,10 +61,14 @@ class Main extends Component {
         return (
             <div>
                 <div id="nav-menu" className="">
+                    
+                    
                     <div>
+                        
                         <li onClick={this.props.home}>
                            Home
                         </li>
+
                         <li onClick={this.openAbout} style={{color: this.state.aboutColor}}>
                             About
                         </li>

@@ -11,7 +11,7 @@ class Footer extends Component {
                 <div className="content-holder">
                     <p>
                         <div style={{display: "inline-block", fontSize: 14, letterSpacing: 1.1}}>
-                            © abhishekad7 (2019)
+                            © 2019 abhishekad7
                         </div>
                         
                         <div style={{display: "inline-block", fontSize: 22, letterSpacing: 2}}>

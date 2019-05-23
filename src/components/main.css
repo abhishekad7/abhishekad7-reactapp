@@ -27,6 +27,11 @@
     cursor: pointer;
 }
 
+#my-icon{
+    display: block;
+    width: 100%;
+}
+
 #nav-menu li:hover{
     color: #ff0077;
 }
@@ -228,6 +233,10 @@
     #nav-menu li{
         display: inline;
         padding: 10px 20px 10px 20px;
+    }
+
+    #my-icon{
+        display: none;
     }
     
     #content{
