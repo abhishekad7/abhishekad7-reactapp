@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class About extends Component {
 
-    skills = {
+    finalSkills = {
         algo: 92,
         ds: 86,
         web: 80,
@@ -11,7 +11,82 @@ class About extends Component {
         desktop: 30,
     };
 
-    cvlink = "";
+    delSkills = {
+        algo: 0,
+        ds: 0,
+        web: 0,
+        cli: 0,
+        android: 0,
+        desktop: 0,
+    }
+
+    cvLink = "";
+    skillsPart = 256;
+    hundred = 0;
+    delHundred = 0;
+    interval = null;
+
+    constructor(props){
+        super(props);
+        this.state = {
+            skills: {
+                algo: 0,
+                ds: 0,
+                web: 0,
+                cli: 0,
+                android: 0,
+                desktop: 0,
+            }
+        }
+        this.calcDelSkills = this.calcDelSkills.bind(this);
+        this.fillSkills = this.fillSkills.bind(this);
+        this.nextVal = this.nextVal.bind(this);
+    }
+
+    calcDelSkills(){
+        this.delSkills = {
+            algo: this.finalSkills.algo/this.skillsPart,
+            ds: this.finalSkills.ds/this.skillsPart,
+            web: this.finalSkills.web/this.skillsPart,
+            cli: this.finalSkills.cli/this.skillsPart,
+            android: this.finalSkills.android/this.skillsPart,
+            desktop: this.finalSkills.desktop/this.skillsPart,
+        }
+        this.delHundred = 100/this.skillsPart;
+    }
+
+    componentDidMount(){
+        this.calcDelSkills();
+        this.interval = setInterval(this.fillSkills, 10)
+    }
+
+    nextVal(num){
+        const p = 100
+        num = Math.floor(num * p);
+        return num/p;
+    }
+
+    fillSkills(){
+
+        if(this.hundred > 100){
+            clearInterval(this.interval);
+            this.setState({skills: this.finalSkills});
+            return;
+        }
+
+        this.currSkill = {
+            algo: this.nextVal(this.state.skills.algo + this.delSkills.algo),
+            ds: this.nextVal(this.state.skills.ds + this.delSkills.ds),
+            web: this.nextVal(this.state.skills.web + this.delSkills.web),
+            cli: this.nextVal(this.state.skills.cli + this.delSkills.cli),
+            android: this.nextVal(this.state.skills.android + this.delSkills.android),
+            desktop: this.nextVal(this.state.skills.desktop + this.delSkills.desktop),
+        }
+        this.hundred += this.delHundred;
+
+        this.setState({skills: this.currSkill});
+    }
+
 
     render() { 
         return (
@@ -59,7 +134,7 @@ class About extends Component {
                     </div>
 
                     <div className="detail-box" style={{marginTop: "30px", fontWeight: "bold"}}>
-                        <a href={this.cvlink} style={{display: "", color: "#aaa", textDecoration: "none", border: "solid 2px #ccc", padding: "10px 40px 10px 40px", color: "#fff"}}>Resume</a>
+                        <a href={this.cvLink} style={{display: "", color: "#aaa", textDecoration: "none", border: "solid 2px #ccc", padding: "10px 40px 10px 40px", color: "#fff"}}>Resume</a>
                     </div>
                 </div>
 
@@ -71,8 +146,8 @@ class About extends Component {
                     <div className="detail-box">
                         <label className=""><span>Algorithms </span></label>
                         <div className="skill-box">
-                            <div className="skill-level" style={{width: this.skills.algo+"%"}}>
-                                {this.skills.algo}%
+                            <div className="skill-level" style={{width: this.state.skills.algo+"%"}}>
+                                {this.state.skills.algo}%
                             </div>
                         </div>
                     </div>
@@ -80,8 +155,8 @@ class About extends Component {
                     <div className="detail-box">
                         <label className=""><span>Data Structures </span></label>
                         <div className="skill-box">
-                            <div className="skill-level" style={{width: this.skills.ds+"%"}}>
-                                {this.skills.ds}%
+                            <div className="skill-level" style={{width: this.state.skills.ds+"%"}}>
+                                {this.state.skills.ds}%
                             </div>
                         </div>
                     </div>
@@ -89,8 +164,8 @@ class About extends Component {
                     <div className="detail-box">
                         <label className=""><span>Web Development </span></label>
                         <div className="skill-box">
-                            <div className="skill-level" style={{width: this.skills.web+"%"}}>
-                                {this.skills.web}%
+                            <div className="skill-level" style={{width: this.state.skills.web+"%"}}>
+                                {this.state.skills.web}%
                             </div>
                         </div>
                     </div>
@@ -98,8 +173,8 @@ class About extends Component {
                     <div className="detail-box">
                         <label className=""><span>Command Line App</span></label>
                         <div className="skill-box">
-                            <div className="skill-level" style={{width: this.skills.cli+"%"}}>
-                                {this.skills.cli}%
+                            <div className="skill-level" style={{width: this.state.skills.cli+"%"}}>
+                                {this.state.skills.cli}%
                             </div>
                         </div>
                     </div>
@@ -107,8 +182,8 @@ class About extends Component {
                     <div className="detail-box">
                         <label className=""><span>Android App Development </span></label>
                         <div className="skill-box">
-                            <div className="skill-level" style={{width: this.skills.android+"%"}}>
-                                {this.skills.android}%
+                            <div className="skill-level" style={{width: this.state.skills.android+"%"}}>
+                                {this.state.skills.android}%
                             </div>
                         </div>
                     </div>
@@ -116,8 +191,8 @@ class About extends Component {
                     <div className="detail-box">
                         <label className=""><span>Desktop App Development </span></label>
                         <div className="skill-box">
-                            <div className="skill-level" style={{width: this.skills.desktop+"%"}}>
-                                {this.skills.desktop}%
+                            <div className="skill-level" style={{width: this.state.skills.desktop+"%"}}>
+                                {this.state.skills.desktop}%
                             </div>
                         </div>
                     </div>
