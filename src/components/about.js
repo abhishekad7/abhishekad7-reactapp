@@ -20,7 +20,7 @@ class About extends Component {
         desktop: 0,
     }
 
-    cvLink = "";
+    cvLink = "/assets/resume.pdf";
     skillsPart = 256;
     hundred = 0;
     delHundred = 0;

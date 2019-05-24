@@ -14,7 +14,7 @@ class Contact extends Component {
 
                     <div className="detail-box">
                         <label className=""><span>Email</span></label>
-                        <span className="detail">abhishekad7@gmial.com</span>
+                        <span className="detail">abhishekad7@gmail.com</span>
                     </div>
                 </div>
 

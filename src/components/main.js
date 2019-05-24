@@ -27,7 +27,7 @@ class Main extends Component {
 
     componentDidMount(){
         //console.log("huha");
-        //this.openContact();
+        this.openProjects();
     }
 
     openAbout(){
