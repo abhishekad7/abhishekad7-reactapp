@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
+
+    constructor(props){
+        super(props);
+        document.title = "Contact | abhishekad7";
+    }
+
     render() { 
         return (
             <center>
                 
                 <div className="content-holder">
+
+                    <div style={{letterSpacing: "4px", fontSize: 30}} className="heading">
+                        <span>Contact</span>
+                    </div>
 
                     <div className="detail-box">
                         <label className=""><span>Phone</span></label>

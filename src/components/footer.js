@@ -16,7 +16,7 @@ class Footer extends Component {
                         
                         <div style={{display: "inline-block", fontSize: 22, letterSpacing: 2}}>
                             <span className="social-icon"><a href="https://github.com/abhishekad7/"><FontAwesomeIcon icon={faGithub}/></a></span> 
-                            <span className="social-icon"><a href="https://www.facebook.com/gallic.ricardo/" > <FontAwesomeIcon icon={faFacebookF}/></a></span> 
+                            <span className="social-icon"><a href="https://www.facebook.com/imabhishekad7/" > <FontAwesomeIcon icon={faFacebookF}/></a></span> 
                             <span className="social-icon"><a href="https://www.linkedin.com/in/abhishekad7/" > <FontAwesomeIcon icon={faLinkedin}/></a></span> 
                             <span className="social-icon"><a href="https://www.twitter.com/imabhishekad7/" > <FontAwesomeIcon icon={faTwitter}/></a></span> 
                             <span className="social-icon"><a href="https://medium.com/abhishekad7/" > <FontAwesomeIcon icon={faMedium}/></a></span>

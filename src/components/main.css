@@ -8,6 +8,19 @@
     background-color: #101010;
 }
 
+.link{
+    display: block;
+    color: #ffffff;
+    padding: 20px 0px 20px 0px;
+    font-weight: bold;
+    list-style: none;
+    transition: color 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    border: solid 0px red;
+    outline: none;
+}
+
 #nav-menu div{
     position: relative;
     display: block;
@@ -25,6 +38,7 @@
     list-style: none;
     transition: color 0.4s;
     cursor: pointer;
+    text-decoration: none;
 }
 
 #my-icon{
@@ -32,8 +46,9 @@
     width: 100%;
 }
 
-#nav-menu li:hover{
+.link:hover{
     color: #ff0077;
+    text-decoration: none;
 }
 
 #content{
@@ -230,7 +245,7 @@
         overflow: auto;
     }
 
-    #nav-menu li{
+    .link{
         display: inline;
         padding: 10px 20px 10px 20px;
     }

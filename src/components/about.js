@@ -28,6 +28,7 @@ class About extends Component {
 
     constructor(props){
         super(props);
+        document.title = "About | abhishekad7";
         this.state = {
             skills: {
                 algo: 0,
@@ -134,7 +135,7 @@ class About extends Component {
                     </div>
 
                     <div className="detail-box" style={{marginTop: "30px", fontWeight: "bold"}}>
-                        <a href={this.cvLink} style={{display: "", color: "#aaa", textDecoration: "none", border: "solid 2px #ccc", padding: "10px 40px 10px 40px", color: "#fff"}}>Resume</a>
+                        <a href={this.cvLink} style={{display: "", textDecoration: "none", border: "solid 2px #ccc", padding: "10px 40px 10px 40px", color: "#fff"}}>Resume</a>
                     </div>
                 </div>
 

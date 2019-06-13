@@ -4,6 +4,7 @@ import Home from "./components/home";
 //import { library } from '@fortawesome/fontawesome-svg-core'
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Main from './components/main';
+import { Route, Link, BrowserRouter as Router, withRouter } from 'react-router-dom'
 
 
 class App extends Component {
@@ -15,10 +16,8 @@ class App extends Component {
       nextpage: <Home main={this.openMain} />,
     };
   }
-  
-  componentDidMount(){
-    
-  }
+
+
 
   openHome(){
     this.setState({nextpage: <Home main={this.openMain} />});
@@ -31,7 +30,10 @@ class App extends Component {
   render() { 
     
     return (
-      this.state.nextpage
+      <Router>
+        <Route exact path="/" component={Home} />
+        <Route path="/ex" component={Main} />
+      </Router>
     );
   }
 }

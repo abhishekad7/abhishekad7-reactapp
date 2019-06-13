@@ -5,6 +5,7 @@ import About from './about';
 import Projects from './projects';
 import Contact from './contact';
 import Footer from './footer';
+import {Route, Link} from 'react-router-dom';
 
 
 class Main extends Component {
@@ -17,73 +18,64 @@ class Main extends Component {
         this.openAbout = this.openAbout.bind(this);
         this.openProjects = this.openProjects.bind(this);
         this.openContact = this.openContact.bind(this);
-        this.state = {
-            nextSection: <About />,
-            aboutColor: this.activeColor,
-            projectColor: this.inactiveColor,
-            contactColor: this.inactiveColor,
-        }
     }
 
-    componentDidMount(){
-        
+
+
+
+    setLinkColor(linkid){
+        /*document.getElementById('link_1').style.color=this.innactiveColor;
+        document.getElementById('link_2').style.color=this.inactiveColor;
+        document.getElementById('link_3').style.color=this.inactiveColor;
+        document.getElementById('link_'+linkid).style.color=this.activeColor;
+        */
     }
 
     openAbout(){
-        this.setState({
-            nextSection: <About />,
-            aboutColor: this.activeColor,
-            projectColor: this.inactiveColor,
-            contactColor: this.inactiveColor,
-        });
+        this.setLinkColor(1);
     }
 
     openProjects(){
-        this.setState({
-            nextSection: <Projects />,
-            aboutColor: this.inactiveColor,
-            projectColor: this.activeColor,
-            contactColor: this.inactiveColor,
-        })
+        this.setLinkColor(2);
     }
 
     openContact(){
-        this.setState({
-            nextSection: <Contact />,
-            aboutColor: this.inactiveColor,
-            projectColor: this.inactiveColor,
-            contactColor: this.activeColor,
-        })
+        this.setLinkColor(3);
     }
+
 
     render() { 
         return (
             <div>
+
                 <div id="nav-menu" className="">
                     
                     
                     <div>
                         
-                        <li onClick={this.props.home}>
-                           Home
-                        </li>
+                        <Link className="link" to="/">
+                            Home
+                        </Link>
 
-                        <li onClick={this.openAbout} style={{color: this.state.aboutColor}}>
-                            About
-                        </li>
+                        <Link className="link" to="/ex/about" onClick={this.openAbout}>
+                            <span id="link_1">About</span>
+                        </Link>
 
-                        <li onClick={this.openProjects} style={{color: this.state.projectColor}}>
-                           Projects
-                        </li>
+                        <Link className="link" to="/ex/projects" onClick={this.openProjects}>
+                            <span id="link_2">Projects</span>
+                        </Link>
 
-                        <li onClick={this.openContact} style={{color: this.state.contactColor}}>
-                            Contact
-                        </li>
+                        <Link className="link" to="/ex/contact" onClick={this.openContact}>
+                            <span id="link_3">Contact</span>
+                        </Link>
                     </div>
                 </div>
 
                 <div id="content">
-                    {this.state.nextSection}
+                    <Route exact path="/ex/about" component={About} />
+                    <Route exact path="/ex/projects" component={Projects} />
+                    <Route exact path="/ex/contact" component={Contact} />
+                    
                     <Footer />
                 </div>
             </div>

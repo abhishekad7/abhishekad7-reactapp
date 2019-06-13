@@ -55,6 +55,7 @@ class Projects extends Component {
 
     constructor(props){
         super(props);
+        document.title = "Projects | abhishead7";
         this.addProject = this.addProject.bind(this);
     }
 
@@ -74,7 +75,7 @@ class Projects extends Component {
             </div>
             <div className="project-sss">
                 {obj.sss.map((src, idx) => {
-                    return (<img src={src} key={idx}/>)
+                    return (<img alt={obj.title} src={src} key={idx}/>)
                 })}
             </div>
             <div className="project-nav">
@@ -92,6 +93,10 @@ class Projects extends Component {
         return (
             <center>
                 <div className="content-holder">
+
+                    <div style={{letterSpacing: "4px", fontSize: 30}} className="heading">
+                        <span>Projects</span>
+                    </div>
                     
                     {this.projects.map((project, idx) => {
                         return this.addProject(project, idx);
