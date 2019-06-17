@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faFacebookF, faLinkedin, faTwitter, faMedium } from '@fortawesome/free-brands-svg-icons';
 import './home.css';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
-import Main from './main';
+import {Link} from 'react-router-dom';
 
 class Home extends Component {
 

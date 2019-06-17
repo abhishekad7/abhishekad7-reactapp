@@ -4,7 +4,7 @@ import Home from "./components/home";
 //import { library } from '@fortawesome/fontawesome-svg-core'
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Main from './components/main';
-import { Route, Link, BrowserRouter as Router, withRouter } from 'react-router-dom'
+import { Route, HashRouter as Router } from 'react-router-dom'
 
 
 class App extends Component {
