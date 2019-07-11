@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from "./components/home";
-//import { library } from '@fortawesome/fontawesome-svg-core'
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Main from './components/main';
 import { Route, HashRouter as Router } from 'react-router-dom'
 

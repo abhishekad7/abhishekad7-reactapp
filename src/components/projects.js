@@ -30,6 +30,17 @@ class Projects extends Component {
         },
 
         {
+            title: "Ecell MNNIT Blog",
+            tools: ["PHP", "Javascript", "CSS"],
+            desc: "A web blog for Ecell MNNIT Allahabad",
+            sss: [],
+            navs:[
+                {"href": "https://blog.ecellmnnit.in", "name": "Live"}
+            ]
+
+        },
+
+        {
             title: "This Webapp",
             tools: ["ReactJS", "Javascript", "CSS"],
             desc: "A ReactJS based web app. This web app is an image of me.",

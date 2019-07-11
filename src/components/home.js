@@ -6,6 +6,12 @@ import {Link} from 'react-router-dom';
 
 class Home extends Component {
 
+
+    constructor(props){
+        super(props);
+        document.title = "abhishead7";
+    }
+
     render() { 
         return (
             <div style={{
