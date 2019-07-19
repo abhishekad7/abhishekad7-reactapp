@@ -20,7 +20,7 @@ class About extends Component {
         desktop: 0,
     }
 
-    cvLink = "/assets/resume.pdf";
+    cvLink = "/assets/Abhishek_Kumar_MNNIT_Allahabad.pdf";
     skillsPart = 256;
     hundred = 0;
     delHundred = 0;
