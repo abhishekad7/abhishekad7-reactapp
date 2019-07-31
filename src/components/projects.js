@@ -18,6 +18,17 @@ class Projects extends Component {
         },
 
         {
+            title: "Live Cricker",
+            tools: ["Python"],
+            desc: "A Command Line app for getting live cricket matches updates. It shows notification at regular intervals.",
+            sss: [],
+            navs:[
+                {"href": "https://github.com/abhishekad7/live-cric", "name": "See on Github"},
+            ]
+
+        },
+
+        {
             title: "Kody Alarm: Coding Calendar",
             tools: ["Java", "Android Studio"],
             desc: "An android app which shows you all upcoming programming contests on AtCoder, Codeforces and Codechef. User can set reminder for upcoming contest.",
@@ -52,16 +63,6 @@ class Projects extends Component {
 
         },
 
-        {
-            title: "Live Cricker",
-            tools: ["Python"],
-            desc: "A Command Line app for getting live cricket matches updates. It shows notification at regular intervals.",
-            sss: [],
-            navs:[
-                {"href": "https://github.com/abhishekad7/live-cric", "name": "See on Github"},
-            ]
-
-        }
     ]
 
     constructor(props){
